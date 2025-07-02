@@ -42,7 +42,7 @@ const PetCard = ({ pet, onClick }) => {
           {pet.type === 'cachorro' ? <><FaDog /> Cachorro</> : <><FaCat /> Gato</>}
         </p>
         <p className="pet-card-location">
-          <MdLocationOn /> {pet.neighborhood}
+          <MdLocationOn /> {pet.address?.street ? `${pet.address.street}, ${pet.address.neighborhood || pet.neighborhood}` : pet.neighborhood}
         </p>
         <p className="pet-card-description">
           {pet.description.length > 80 

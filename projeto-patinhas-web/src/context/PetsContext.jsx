@@ -17,7 +17,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Max',
       status: 'perdido',
       type: 'cachorro',
-      photoUri: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=300&h=300&fit=crop',
+      photoUri: 'https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2023/03/15/2063712264-shutterstock1738196390.jpg',
       description: 'Cachorro de porte médio, muito carinhoso e brincalhão. Desapareceu durante caminhada.',
       neighborhood: 'Centro',
       contact: {
@@ -27,6 +27,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.5954,
         longitude: -48.5480
+      },
+      address: {
+        street: 'Rua Felipe Schmidt, 390',
+        neighborhood: 'Centro'
       }
     },
     {
@@ -44,6 +48,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.5977,
         longitude: -48.5183
+      },
+      address: {
+        street: 'Rua Lauro Linhares, 2123',
+        neighborhood: 'Trindade'
       }
     },
     {
@@ -52,7 +60,7 @@ export const PetsProvider = ({ children }) => {
       status: 'perdido',
       type: 'cachorro',
       photoUri: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=300&h=300&fit=crop',
-      description: 'Golden Retriever de 3 anos, muito amigável com crianças.',
+      description: 'Bulldog de 3 anos, muito amigável com crianças.',
       neighborhood: 'Lagoa da Conceição',
       contact: {
         name: 'Ana Costa',
@@ -61,6 +69,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.6088,
         longitude: -48.4577
+      },
+      address: {
+        street: 'Avenida das Rendeiras, 1031',
+        neighborhood: 'Lagoa da Conceição'
       }
     },
     {
@@ -78,6 +90,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.430609,
         longitude: -48.4633
+      },
+      address: {
+        street: 'Rua das Acácias, 258',
+        neighborhood: 'Canasvieiras'
       }
     },
     {
@@ -95,6 +111,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.4377,
         longitude: -48.3988
+      },
+      address: {
+        street: 'Rua Dom João Becker, 89',
+        neighborhood: 'Ingleses'
       }
     },
     {
@@ -112,6 +132,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.439930,
         longitude: -48.4944
+      },
+      address: {
+        street: 'Avenida dos Búzios, 1447',
+        neighborhood: 'Jurerê'
       }
     },
     {
@@ -129,6 +153,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.448926,
         longitude: -48.527019
+      },
+      address: {
+        street: 'Rua Aderbal Ramos da Silva, 156',
+        neighborhood: 'Daniela'
       }
     },
     {
@@ -146,6 +174,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.4244,
         longitude: -48.4252
+      },
+      address: {
+        street: 'Estrada Geral de Cachoeira do Bom Jesus, 783',
+        neighborhood: 'Cachoeira do Bom Jesus'
       }
     },
     {
@@ -163,6 +195,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.506389,
         longitude: -48.519713
+      },
+      address: {
+        street: 'Rua Coronel Lopes Trovão, 234',
+        neighborhood: 'Santo Antônio de Lisboa'
       }
     },
     {
@@ -180,6 +216,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.490927,
         longitude: -48.519831
+      },
+      address: {
+        street: 'Rua Lúcio Costa, 512',
+        neighborhood: 'Sambaqui'
       }
     },
     {
@@ -197,6 +237,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.5750,
         longitude: -48.4150
+      },
+      address: {
+        street: 'Rua Afonso Delambert Neto, 678',
+        neighborhood: 'Barra da Lagoa'
       }
     },
     {
@@ -214,6 +258,10 @@ export const PetsProvider = ({ children }) => {
       location: {
         latitude: -27.627284,
         longitude: -48.445845
+      },
+      address: {
+        street: 'Rua Tertuliano Brito Xavier, 321',
+        neighborhood: 'Joaquina'
       }
     },
     {

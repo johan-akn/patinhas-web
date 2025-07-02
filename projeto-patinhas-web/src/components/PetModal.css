@@ -170,6 +170,45 @@
   background-color: #E8A73B;
 }
 
+/* Estilos para informações de localização detalhadas */
+.location-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.location-details p {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.coordinates {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.coordinates p:first-child {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.coordinates p:not(:first-child) {
+  margin-left: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.manual-badge {
+  background-color: #4A90E2;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  margin-left: 0.5rem;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .modal-overlay {

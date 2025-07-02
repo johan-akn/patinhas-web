@@ -196,6 +196,17 @@
   font-weight: 500;
 }
 
+/* Estilo para o badge manual */
+.manual-badge {
+  background-color: #4A90E2;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  margin-left: 0.5rem;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .report-page-container {

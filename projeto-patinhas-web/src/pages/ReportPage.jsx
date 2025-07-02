@@ -28,7 +28,8 @@ const ReportPage = () => {
   const [addressInfo, setAddressInfo] = useState({
     street: '',
     neighborhood: '',
-    isLoading: false
+    isLoading: false,
+    isManual: false
   });
 
   const neighborhoods = [
@@ -125,6 +126,23 @@ const ReportPage = () => {
     getAddressFromCoordinates(position[0], position[1]);
   };
 
+  const handleAddressSelect = (addressData) => {
+    setAddressInfo({
+      street: addressData.street,
+      neighborhood: addressData.neighborhood,
+      isLoading: false,
+      isManual: addressData.isManual || false
+    });
+
+    // Se o bairro foi informado e está na lista, preencher automaticamente
+    if (addressData.neighborhood && neighborhoods.includes(addressData.neighborhood)) {
+      setFormData(prev => ({
+        ...prev,
+        neighborhood: addressData.neighborhood
+      }));
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -181,11 +199,23 @@ const ReportPage = () => {
         return;
       }
 
-      if (!formData.latitude || !formData.longitude) {
+      // Validar localização (coordenadas ou endereço manual)
+      if (!formData.latitude && !formData.longitude && !addressInfo.isManual) {
         Swal.fire({
           icon: 'warning',
           title: 'Localização necessária',
-          text: 'Por favor, selecione a localização.',
+          text: 'Por favor, selecione a localização ou digite o endereço manualmente.',
+          confirmButtonText: 'OK'
+        });
+        return;
+      }
+
+      // Se é endereço manual, validar se tem as informações básicas
+      if (addressInfo.isManual && (!addressInfo.street || !addressInfo.neighborhood)) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Endereço incompleto',
+          text: 'Por favor, preencha a rua e o bairro do endereço manual.',
           confirmButtonText: 'OK'
         });
         return;
@@ -210,9 +240,16 @@ const ReportPage = () => {
           phone: formData.contactPhone.trim()
         },
         photoUri,
-        location: {
-          latitude: parseFloat(formData.latitude),
-          longitude: parseFloat(formData.longitude)
+        ...(formData.latitude && formData.longitude && {
+          location: {
+            latitude: parseFloat(formData.latitude),
+            longitude: parseFloat(formData.longitude)
+          }
+        }),
+        address: {
+          street: addressInfo.street || '',
+          neighborhood: addressInfo.neighborhood || formData.neighborhood,
+          isManual: addressInfo.isManual || false
         }
       };
 
@@ -383,6 +420,7 @@ const ReportPage = () => {
               <label>Onde o pet foi {formData.status === 'perdido' ? 'perdido' : 'encontrado'}? *</label>
               <LocationPicker 
                 onLocationSelect={handleLocationSelect}
+                onAddressSelect={handleAddressSelect}
                 initialPosition={
                   formData.latitude && formData.longitude 
                     ? [parseFloat(formData.latitude), parseFloat(formData.longitude)]
@@ -390,8 +428,8 @@ const ReportPage = () => {
                 }
               />
               
-              {/* Exibir endereço baseado nas coordenadas */}
-              {(formData.latitude && formData.longitude) && (
+              {/* Exibir endereço baseado nas coordenadas ou manual */}
+              {((formData.latitude && formData.longitude) || addressInfo.isManual) && (
                 <div className="address-info">
                   {addressInfo.isLoading ? (
                     <p className="address-loading">🔍 Buscando endereço...</p>
@@ -400,6 +438,7 @@ const ReportPage = () => {
                       {addressInfo.street && (
                         <p className="address-street">
                           <MdLocationOn /> <strong>Endereço:</strong> {addressInfo.street}
+                          {addressInfo.isManual && <span className="manual-badge"> (Manual)</span>}
                         </p>
                       )}
                       {addressInfo.neighborhood && (

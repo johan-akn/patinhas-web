@@ -88,8 +88,33 @@ const PetModal = ({ pet, isOpen, onClose }) => {
 
                     <div className="info-section">
                         <h3><MdLocationOn /> Localização</h3>
-                        <p>Latitude: {pet.location.latitude}</p>
-                        <p>Longitude: {pet.location.longitude}</p>
+                        {pet.address ? (
+                            <div className="location-details">
+                                {pet.address.street && (
+                                    <p><strong>Endereço:</strong> {pet.address.street}
+                                        {pet.address.isManual && <span className="manual-badge"> Manual</span>}
+                                    </p>
+                                )}
+                                <p><strong>Bairro:</strong> {pet.address.neighborhood || pet.neighborhood}, Florianópolis</p>
+                                {/* {pet.location && (
+                                    <div className="coordinates">
+                                        <p><strong>Coordenadas:</strong></p>
+                                        <p>Latitude: {pet.location.latitude}</p>
+                                        <p>Longitude: {pet.location.longitude}</p>
+                                    </div>
+                                )} */}
+                            </div>
+                        ) : (
+                            <div className="location-details">
+                                <p><strong>Bairro:</strong> {pet.neighborhood}, Florianópolis</p>
+                                {pet.location && (
+                                    <>
+                                        <p>Latitude: {pet.location.latitude}</p>
+                                        <p>Longitude: {pet.location.longitude}</p>
+                                    </>
+                                )}
+                            </div>
+                        )}
                     </div>
                 </div>
 
