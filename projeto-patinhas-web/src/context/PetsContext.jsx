@@ -38,7 +38,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Luna',
       status: 'encontrado',
       type: 'gato',
-      photoUri: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300&h=300&fit=crop',
+      photoUri: 'https://media.istockphoto.com/id/140469307/pt/foto/neve.jpg?s=612x612&w=0&k=20&c=NCN1WU9tdXIsKuiXM6P1YJRTr3wclrhyCoipby8uLAY=',
       description: 'Gata persa, pelagem longa e clara. Muito dócil e carinhosa.',
       neighborhood: 'Trindade',
       contact: {
@@ -59,8 +59,8 @@ export const PetsProvider = ({ children }) => {
       name: 'Buddy',
       status: 'perdido',
       type: 'cachorro',
-      photoUri: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=300&h=300&fit=crop',
-      description: 'Bulldog de 3 anos, muito amigável com crianças.',
+      photoUri: 'https://www.cobasi.com.br/arquivos/bulldog-ingles-meio-4.png?v=637612759761530000',
+      description: 'Bulldog Inglês de 3 anos, muito amigável com crianças.',
       neighborhood: 'Lagoa da Conceição',
       contact: {
         name: 'Ana Costa',
@@ -80,7 +80,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Mel',
       status: 'encontrado',
       type: 'gato',
-      photoUri: 'https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=300&h=300&fit=crop',
+      photoUri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMGUQweTizUPvpTb-zLYQbXu7XhWf_ZGEGZg&s',
       description: 'Gatinha laranja muito meiga, estava perdida há 3 dias. Muito carinhosa com crianças.',
       neighborhood: 'Canasvieiras',
       contact: {
@@ -101,7 +101,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Thor',
       status: 'perdido',
       type: 'cachorro',
-      photoUri: 'https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=300&h=300&fit=crop',
+      photoUri: 'https://www.petz.com.br/blog/wp-content/uploads/2022/07/curiosidades-sobre-pastor-alemao3.jpg',
       description: 'Pastor Alemão, porte grande, muito dócil. Fugiu durante os fogos de artifício.',
       neighborhood: 'Ingleses',
       contact: {
@@ -122,7 +122,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Mimi',
       status: 'encontrado',
       type: 'gato',
-      photoUri: 'https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=300&h=300&fit=crop',
+      photoUri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1aWEjSeRTnLdt5QtfEWE2Ul0DmJ6w6g9_9g&s',
       description: 'Gata siamês, muito elegante e independente. Encontrada na praia.',
       neighborhood: 'Jurerê',
       contact: {
@@ -143,7 +143,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Bolt',
       status: 'perdido',
       type: 'cachorro',
-      photoUri: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&h=300&fit=crop',
+      photoUri: 'https://www.petz.com.br/cachorro/racas/beagle/img/beagle-caracteristicas-fisicas.webp',
       description: 'Beagle muito energético, adora correr. Saiu para passear e não voltou.',
       neighborhood: 'Daniela',
       contact: {
@@ -164,7 +164,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Princesa',
       status: 'encontrado',
       type: 'gato',
-      photoUri: 'https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=300&h=300&fit=crop',
+      photoUri: 'https://img.freepik.com/fotos-gratis/gato-preto-com-olhos-verdes-descansando-em-uma-grama_181624-30967.jpg',
       description: 'Gata preta de olhos verdes, muito carinhosa. Estava machucada quando encontrada.',
       neighborhood: 'Cachoeira do Bom Jesus',
       contact: {
@@ -185,7 +185,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Rex',
       status: 'perdido',
       type: 'cachorro',
-      photoUri: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?w=300&h=300&fit=crop',
+      photoUri: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/10/22/09/chocolate-labrador.jpg?width=1200&height=900&fit=crop',
       description: 'Labrador chocolate, muito obediente e calmo. Desapareceu do quintal.',
       neighborhood: 'Santo Antônio de Lisboa',
       contact: {
@@ -206,7 +206,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Fifi',
       status: 'encontrado',
       type: 'gato',
-      photoUri: 'https://images.unsplash.com/photo-1571566882372-1598d88abd90?w=300&h=300&fit=crop',
+      photoUri: 'https://portaledicase.com/wp-content/uploads/2023/10/angora-1024x683.jpg',
       description: 'Gata branca pequena, muito tímida. Estava escondida embaixo de um carro.',
       neighborhood: 'Sambaqui',
       contact: {
@@ -227,7 +227,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Toby',
       status: 'perdido',
       type: 'cachorro',
-      photoUri: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=300&h=300&fit=crop',
+      photoUri: 'https://www.dogvibe.com.br/wp-content/uploads/2023/06/guia_racas_buldogue_frances.webp',
       description: 'Bulldog francês, respiração ofegante característico da raça. Muito dócil.',
       neighborhood: 'Barra da Lagoa',
       contact: {
@@ -248,7 +248,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Nala',
       status: 'encontrado',
       type: 'gato',
-      photoUri: 'https://images.unsplash.com/photo-1513245543132-31f507417b26?w=300&h=300&fit=crop',
+      photoUri: 'https://cdn0.peritoanimal.com.br/pt/posts/1/2/6/4_gato_europeu_23621_3_600.jpg',
       description: 'Gata rajada, muito esperta e brincalhona. Estava faminta quando encontrada.',
       neighborhood: 'Joaquina',
       contact: {
@@ -270,7 +270,7 @@ export const PetsProvider = ({ children }) => {
       status: 'perdido',
       type: 'cachorro',
       photoUri: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=300&h=300&fit=crop',
-      description: 'Cachorro de pequeno porte, muito protetor mas gentil. Collar azul.',
+      description: 'Cachorro de pequeno porte, muito protetor mas gentil. Colar azul.',
       neighborhood: 'Campeche',
       contact: {
         name: 'Juliana Mendes',
@@ -286,7 +286,7 @@ export const PetsProvider = ({ children }) => {
       name: 'Bella',
       status: 'encontrado',
       type: 'gato',
-      photoUri: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=300&h=300&fit=crop',
+      photoUri: 'https://fisiocarepet.com.br/wp-content/uploads/2024/10/pexels-yumecori-1475260-scaled-e1729706057755-1024x569.jpg',
       description: 'Gata maine coon, pelagem longa e fofinha. Muito calma e carinhosa.',
       neighborhood: 'Armação',
       contact: {
@@ -304,7 +304,7 @@ export const PetsProvider = ({ children }) => {
       status: 'perdido',
       type: 'gato',
       photoUri: 'https://images.unsplash.com/photo-1511044568932-338cba0ad803?w=300&h=300&fit=crop',
-      description: 'Gato persa laranja, pelo longo e olhos azuis. Muito manso e caseiro.',
+      description: 'Gato laranja, pelo longo e olhos azuis. Muito manso e caseiro.',
       neighborhood: 'Pântano do Sul',
       contact: {
         name: 'Camila Barbosa',
