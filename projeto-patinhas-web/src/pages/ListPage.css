@@ -1,0 +1,86 @@
+.list-page {
+  min-height: 100vh;
+  background-color: var(--background-secondary); /* Branco Casca de Ovo */
+}
+
+.list-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.list-page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.list-page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color); /* Roxo Cuidado */
+  margin: 0 0 1rem 0;
+}
+
+.list-page-header p {
+  font-size: 1.125rem;
+  color: var(--text-primary); /* Grafite Escuro */
+  margin: 0;
+}
+
+.results-summary {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.results-summary p {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.pets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6b7280;
+  font-size: 1.125rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .list-page-container {
+    padding: 1rem;
+  }
+
+  .list-page-header h1 {
+    font-size: 2rem;
+  }
+
+  .list-page-header p {
+    font-size: 1rem;
+  }
+
+  .pets-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .list-page-header {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .list-page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .pets-grid {
+    gap: 1rem;
+  }
+}

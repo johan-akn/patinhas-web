@@ -1,0 +1,149 @@
+.location-picker {
+  margin-top: 1rem;
+}
+
+.location-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.location-btn {
+  background-color: var(--primary-color); /* Roxo Cuidado */
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.location-btn:hover {
+  background-color: #8A6CC0; /* Roxo Cuidado mais escuro */
+}
+
+.location-btn.current {
+  background-color: var(--secondary-color); /* Amarelo Aconchego */
+  color: var(--text-primary); /* Grafite Escuro */
+}
+
+.location-btn.current:hover {
+  background-color: #E8A73B; /* Amarelo Aconchego mais escuro */
+}
+
+.location-btn.map {
+  background-color: var(--primary-color);
+}
+
+.location-btn.map:hover {
+  background-color: var(--accent-color);
+}
+
+.selected-location {
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.selected-location p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.selected-location p:first-child {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.map-picker {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--background);
+}
+
+.map-instruction {
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-align: center;
+  font-weight: 500;
+}
+
+.map-container-picker {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.map-actions {
+  text-align: center;
+}
+
+.confirm-location-btn {
+  background-color: var(--secondary-color); /* Amarelo Aconchego */
+  color: var(--text-primary); /* Grafite Escuro */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.confirm-location-btn:hover {
+  background-color: #E8A73B; /* Amarelo Aconchego mais escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .location-buttons {
+    flex-direction: column;
+  }
+
+  .location-btn {
+    font-size: 0.8rem;
+    padding: 0.625rem;
+  }
+
+  .map-picker {
+    padding: 0.75rem;
+  }
+
+  .map-container-picker {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .location-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .selected-location {
+    padding: 0.5rem;
+  }
+
+  .selected-location p {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,165 @@
+/* CSS Reset e configurações globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', system-ui, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  
+  /* Paleta de Cores "Patinhas do Coração" */
+  --primary-color: #A182D1; /* Roxo Cuidado */
+  --secondary-color: #F9B94F; /* Amarelo Aconchego */
+  --accent-color: #A182D1; /* Roxo Cuidado para destaques */
+  --background: #FFFFFF; /* Branco Puro */
+  --background-secondary: #FEFBF6; /* Branco Casca de Ovo */
+  --text-primary: #433E49; /* Grafite Escuro */
+  --text-secondary: #6b7280; /* Mantido para textos secundários */
+  --border-color: #e5e7eb;
+  --danger-color: #ef4444; /* Para pets perdidos */
+  --success-color: #22c55e; /* Para pets encontrados */
+  
+  color: var(--text-primary);
+  background-color: var(--background-secondary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Tipografia responsiva */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--primary-color); /* Roxo Cuidado para títulos */
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+p {
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* Botões */
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #E8A73B; /* Amarelo Aconchego mais escuro no hover */
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background-color: var(--text-secondary);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Inputs */
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Utilitários para responsividade */
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+/* Media queries para ajustes de fonte */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}

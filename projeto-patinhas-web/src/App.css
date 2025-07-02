@@ -1,0 +1,56 @@
+/* Reset e configurações globais */
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+/* Layouts Fluidos com Flexbox */
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Media Queries para Responsividade */
+
+/* Tablets e telas menores */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  
+  .app {
+    font-size: 14px;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .app {
+    font-size: 13px;
+  }
+}
+
+/* Telas muito grandes */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}

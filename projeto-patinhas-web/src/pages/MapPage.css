@@ -1,0 +1,238 @@
+.map-page {
+  min-height: 100vh;
+  background-color: var(--background-secondary); /* Branco Casca de Ovo */
+}
+
+.map-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+.map-page-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.map-page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color); /* Roxo Cuidado */
+  margin: 0 0 1rem 0;
+}
+
+.map-page-header p {
+  font-size: 1.125rem;
+  color: var(--text-primary); /* Grafite Escuro */
+  margin: 0 0 1.5rem 0;
+}
+
+.map-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary); /* Grafite Escuro */
+}
+
+.legend-icon {
+  font-size: 1.2rem;
+}
+
+.results-summary {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.results-summary p {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.map-container {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+}
+
+/* Estilos para o popup do mapa */
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  gap: 1rem;
+}
+
+.popup-main {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.popup-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popup-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.popup-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color); /* Roxo Cuidado */
+  line-height: 1.3;
+}
+
+.popup-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.popup-description {
+  font-size: 0.8rem;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0.3rem 0;
+  max-height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.popup-btn {
+  background-color: var(--secondary-color); /* Amarelo Aconchego */
+  color: var(--text-primary); /* Grafite Escuro */
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 6px rgba(249, 185, 79, 0.3);
+  align-self: center;
+  width: 100%;
+}
+
+.popup-btn:hover {
+  background-color: #E8A73B; /* Amarelo Aconchego mais escuro */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(249, 185, 79, 0.4);
+}
+
+/* Custom marker styles */
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.popup-status {
+  font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .map-page-container {
+    padding: 1rem;
+    height: calc(100vh - 140px);
+  }
+
+  .map-page-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .map-page-header h1 {
+    font-size: 2rem;
+  }
+
+  .map-page-header p {
+    font-size: 1rem;
+  }
+
+  .map-legend {
+    gap: 1rem;
+  }
+
+  .legend-item {
+    font-size: 0.875rem;
+  }
+
+  .popup-content {
+    min-width: 220px;
+    gap: 0.8rem;
+  }
+
+  .popup-main {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .popup-image {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+  }
+
+  .popup-info {
+    text-align: center;
+    gap: 0.3rem;
+  }
+
+  .popup-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .map-legend {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
