@@ -54,15 +54,25 @@
 }
 
 .navbar-link.active {
-  background-color: var(--secondary-color); /* Amarelo Aconchego */
-  color: var(--text-primary); /* Grafite Escuro */
-  font-weight: 600;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.navbar-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
 }
 
 .navbar-link.active:hover {
-  background-color: #E8A73B; /* Amarelo Aconchego mais escuro */
-  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
 /* Responsividade para mobile */
